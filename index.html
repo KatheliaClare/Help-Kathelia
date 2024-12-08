@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search the garden</title>
+    <title>The Garden of Earthly Delights</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-<!-- Search Bar -->
-<div class="search-container">
-    <input type="text" id="search-input" class="search-input" placeholder="Search...">
+  <!-- Search Bar -->
+  <div class="search-container">
+    <label for="search-input" class="visually-hidden"></label>
+    <input type="text" id="search-input" class="search-input" placeholder="Search..." aria-label="Search">
     <ul id="search-results" class="search-results"></ul>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" role="dialog" aria-hidden="true">
+    <img id="lightbox-image" src="" alt="">
+    <iframe id="lightbox-iframe" src="" style="display: none;" frameborder="0"></iframe>
+    <p id="lightbox-text">Your descriptive text here</p>
 </div>
 
-<!-- Lightbox Modal -->
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <span class="close">&times;</span>
-    <img id="lightbox-image" class="lightbox-content" src="" alt="">
-    <p id="lightbox-text" class="lightbox-text">Your descriptive text here</p>
-    <iframe id="lightbox-iframe" class="lightbox-content" src="" style="display: none;" frameborder="0"></iframe>
-</div>
-
-<!-- Button to open a page in Lightbox -->
-<div class="button-container">
+  <!-- Button -->
+  <div class="button-container">
     <button id="openPageButton" class="open-page-button"><i class="fa-solid fa-circle-info"></i></button>
-</div>
+  </div>
 
-<script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
